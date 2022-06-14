@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.view.ShopListFragment">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/big">
+
+                <com.albertomier.klikinwaylettest.ui.customview.CustomInfoLayout
+                    android:id="@+id/layout_1"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="@dimen/standard"
+                    app:bgColor="@color/blue"
+                    app:layout_constraintEnd_toStartOf="@id/layout_2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:subtitle="Comercios"
+                    app:subtitleColor="@color/white"
+                    app:title="101"
+                    app:titleColor="@color/white" />
+
+                <com.albertomier.klikinwaylettest.ui.customview.CustomInfoLayout
+                    android:id="@+id/layout_2"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="@dimen/standard"
+                    app:bgColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/layout_1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:subtitle="A menos de 40 km"
+                    app:subtitleColor="@color/black"
+                    app:title="10"
+                    app:titleColor="@color/orange" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_layout"
+                android:layout_marginHorizontal="@dimen/standard" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shopList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/categoryList"
+                android:layout_marginHorizontal="@dimen/standard" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </FrameLayout>
+</layout>

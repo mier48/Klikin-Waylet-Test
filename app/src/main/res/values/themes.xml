@@ -12,7 +12,11 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="backgroundColor">@color/list_background</item>
-        <item name="android:windowBackground">@color/list_background</item>
+        <item name="backgroundColor">@color/background</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+<!--        <item name="android:windowBackground">@drawable/splash_background</item>-->
     </style>
 </resources>
